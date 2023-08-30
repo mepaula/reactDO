@@ -36,13 +36,13 @@ function App() {
           <h1>Lista de Tarefas para Fazer:</h1>
         </header>
         <div>
-          <input type="text" name="tarefa" placeholder="Escreva a sua tarefa..." value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false} ) }/>
-          <button onClick={addTarefa}>Ver tarefas</button>
+          <input className="escreva" type="text" name="tarefa" placeholder="Escreva a sua tarefa..." value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false} ) }/>
+          <button className="ver" onClick={addTarefa}>Ver tarefas</button>
         </div>
-        <div>
-          <ul>
+        <div className="tarefas">
+          <ul className="resolver">
             {listaTarefas.map( (item, index) => (
-              <li className="item"key={item.id}>{item.texto}<button onClick={ () => statusTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não Concluida' }</button> <button onClick={ () => excluirTarefa(item.id) }>Excluir</button></li>
+              <li className="item"key={item.id}><div className="texto-agendamento">{item.texto}</div><button onClick={ () => statusTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não Concluida' }</button> <button className="deletar" onClick={ () => excluirTarefa(item.id) }>Excluir</button></li>
             ))}
           </ul>
         </div>

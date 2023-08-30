@@ -1,14 +1,46 @@
 body{
-    background-color: rgb(59, 59, 215);
+    background-color: rgb(90, 154, 211);
     text-align: center;
     border: 5px solid rgb(34, 173, 208) ;
+    margin-left: 38%;
+    margin-right: 38%;
+    border-radius: 30px;
+    color: white;
     
     
 }
 .item{
     list-style-type: none;
+    margin-right: 5%;
+    margin-top: 10%;
+    border-radius: 10%;
 }
 .lista{
     font-family: Arial, Helvetica, sans-serif;
     background-color:  rgb(34, 173, 208);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5%;
+}
+.escreva{
+    margin-right: 5%;
+    background-color: rgb(34, 173, 208);
+    color: rgb(245, 245, 245);
+}
+.ver{
+    margin-right: 15%;
+    background-color: rgb(34, 173, 208);
+}
+.tarefas{
+    margin-top: 5%;
+}
+.resolver{
+    margin-top: 1%;
+}
+.deletar{
+    background-color: blueviolet;
+    color: white;
+}
+.texto-agendamento{
+
 }
