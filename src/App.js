@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Style from "./global.css";
 
 function App() {
 
@@ -31,17 +32,17 @@ function App() {
 
   return (
     <>
-        <header>
+        <header className="lista">
           <h1>Lista de Tarefas para Fazer:</h1>
         </header>
         <div>
-          <input type="text" name="tarefa" placeholder="Escreva a sua tarefa" value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false} ) }/>
+          <input type="text" name="tarefa" placeholder="Escreva a sua tarefa..." value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false} ) }/>
           <button onClick={addTarefa}>Ver tarefas</button>
         </div>
         <div>
           <ul>
             {listaTarefas.map( (item, index) => (
-              <li key={item.id}>{item.texto}<button onClick={ () => statusTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não Concluida' }</button> <button onClick={ () => excluirTarefa(item.id) }>Excluir</button></li>
+              <li className="item"key={item.id}>{item.texto}<button onClick={ () => statusTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não Concluida' }</button> <button onClick={ () => excluirTarefa(item.id) }>Excluir</button></li>
             ))}
           </ul>
         </div>

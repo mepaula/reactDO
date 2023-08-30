@@ -1,4 +1,14 @@
 body{
-    background-color: rgb(38, 38, 218);
+    background-color: rgb(59, 59, 215);
     text-align: center;
+    border: 5px solid rgb(34, 173, 208) ;
+    
+    
+}
+.item{
+    list-style-type: none;
+}
+.lista{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  rgb(34, 173, 208);
 }
